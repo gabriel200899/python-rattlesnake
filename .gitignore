@@ -37,3 +37,6 @@ Icon
 
 # PyCharm
 *.idea
+
+# Python
+*.pyc

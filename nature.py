@@ -1,7 +1,9 @@
-from creature import Creature
+import creature
+import skill
 
 
-class Bat(Creature):
+class Bat(creature.Creature):
     def __init__(self, level):
-        super.__init__()
+        super(creature.Creature, self).__init__()
         self.level = level
+        self.skills.update(skill.attack)
