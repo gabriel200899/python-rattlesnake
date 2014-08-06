@@ -15,10 +15,13 @@ def fight(player, enemy):
 
 
 def battle_status(player, enemy):
-    output = ['%10s%-10s%14s%-10s' % ('', player.name, '', enemy.name),
-              '%10s%-10s%4d%10s%-10s%4d' % ('', 'Level:', player.lvl, '', 'Level:', enemy.lvl), ' Skills:']
+    output = ['%10s%-10s%15s%-10s' % ('', player.name, '', enemy.name),
+              '%10s%-10s%5d%10s%-10s%5d' % ('', 'Level:', player.lvl, '', 'Level:', enemy.lvl),
+              '%10s%-10s%5d%10s%-10s%5d' % ('', 'Life:', player.life, '', 'Life:', enemy.life),
+              '%10s%-10s%5d%10s%-10s%5d' % ('', 'Mana:', player.mana, '', 'Mana:', enemy.mana),
+              '    Skills:']
     # prints the player skills
     for i in range(len(player.skills)):
-        output.append("%2d%10s" % (i + 1, player.skills[i][0]))
+        output.append("%5d%20s (%d DMG)" % (i + 1, player.skills[i][0], player.skills[i][1](player)))
     # code here
     return '\n'.join(output)

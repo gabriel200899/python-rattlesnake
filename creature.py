@@ -3,8 +3,8 @@ class Creature(object):
 
         self.name = name
 
-        self.life = 0
-        self.mana = 0
+        self.life = 1
+        self.mana = 1
 
         self.gold = 0
 
@@ -22,3 +22,6 @@ class Creature(object):
             self.life = 0
         else:
             self.life -= damage
+
+    def level_up(self):
+        self.lvl = int((self.exp / 100) ** 0.5)

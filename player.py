@@ -7,3 +7,7 @@ class Player(creature.Creature):
         super(Player, self).__init__(name)
         self.life = 10
         self.skills.append(skill.attack)
+
+    def build(self):
+        # interactive player creation
+        pass
