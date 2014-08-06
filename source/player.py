@@ -1,4 +1,5 @@
-from src import creature, skill
+import creature
+import skill
 
 
 class Player(creature.Creature):

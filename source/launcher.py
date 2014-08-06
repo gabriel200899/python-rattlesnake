@@ -1,6 +1,6 @@
-from src.engine import *
-from src.player import Player
-from src.nature import Bat
+from engine import *
+from player import Player
+from nature import Bat
 
 
 def main():
