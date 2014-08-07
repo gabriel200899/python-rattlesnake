@@ -26,7 +26,6 @@ def fight(player, enemy):
         player.loot(enemy)
 
 
-
 def get_input():
     # strip discards whitespaces
     player_input = ""

@@ -1,5 +1,4 @@
 import creature
-import skill
 
 roles = [["Barbarian", [25, 10, 10, 4, 4, 4, 6, 8]]]
 

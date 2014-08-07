@@ -1,5 +1,4 @@
 import creature
-import skill
 
 
 class Bat(creature.Creature):

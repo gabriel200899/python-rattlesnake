@@ -9,12 +9,15 @@ def main():
     player = Player()
     player.build()
     # please, write a plot for this
-    bat = Bat(2)
-    wolf = Wolf(1)
-    bear = Bear(1)
-    fight(player, bat)
-    fight(player, wolf)
-    fight(player, bear)
+    if player.life != 0:
+        bat = Bat(2)
+        fight(player, bat)
+    if player.life != 0:
+        wolf = Wolf(1)
+        fight(player, wolf)
+    if player.life != 0:
+        bear = Bear(1)
+        fight(player, bear)
 
 if __name__ == '__main__':
     main()
