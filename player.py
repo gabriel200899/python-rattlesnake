@@ -40,6 +40,10 @@ class Player(creature.Creature):
         self.luck = roles[index][1][6]
         self.fat = roles[index][1][7]
 
+    def loot(self, corpse):
+        self.exp += corpse.exp
+        self.gold += corpse.gold
+
 
 def print_roles():
     output = []

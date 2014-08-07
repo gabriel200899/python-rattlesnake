@@ -3,8 +3,9 @@ import help_strings
 
 def fight(player, enemy):
     print("%s is fighting %s!" % (player.name, enemy.name))
-    while player.life != 0:
+    while player.life != 0 and enemy.life != 0:
         print(battle_status(player, enemy))
+        # player's turn
         while True:
             player_input = get_input()
             if player_input.isdigit() and 0 < eval(player_input) <= len(player.skills):
@@ -15,8 +16,15 @@ def fight(player, enemy):
                 pass
             else:
                 print("Invalid input. Try again.")
-        # continue from here
-        break
+        # foe's turn
+        enemy.play(player)
+    if player.life == 0:
+        print("You lost. Go home.")
+    else:
+        print("You managed to kill %s!" % enemy.name)
+        print("You get %d experience points and %d gold coins." % (enemy.exp, enemy.gold))
+        player.loot(enemy)
+
 
 
 def get_input():
