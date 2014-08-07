@@ -1,3 +1,6 @@
+import skill
+
+
 class Creature(object):
     def __init__(self, name):
 
@@ -11,11 +14,14 @@ class Creature(object):
         self.strength = 0
         self.charisma = 0
         self.agility = 0
+        self.wisdom = 0
+        self.luck = 0
+        self.fat = 0
 
         self.exp = 0
         self.lvl = 1
 
-        self.skills = []
+        self.skills = [skill.attack]
 
     def take_damage(self, damage):
         if damage >= self.life:

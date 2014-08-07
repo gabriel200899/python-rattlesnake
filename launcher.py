@@ -4,7 +4,9 @@ from nature import Bat
 
 
 def main():
-    player = Player("Dude")
+    player = Player()
+    player.build()
+    # please, write a plot for this
     bat = Bat(2)
     fight(player, bat)
 
